@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="incomeAnchorPane" prefHeight="1058.0" prefWidth="1642.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeReportController">
+   <children>
+      <LineChart fx:id="monthlyLineChart" layoutX="25.0" layoutY="184.0" prefHeight="813.0" prefWidth="815.0" title="Monthly Income Report">
+        <xAxis>
+          <CategoryAxis fx:id="month" label="Month" side="BOTTOM" tickLabelFill="#00172d" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="income" label="Income(Rs)" side="LEFT" tickLabelFill="#00172d" />
+        </yAxis>
+      </LineChart>
+      <LineChart fx:id="annuallinechart" layoutX="852.0" layoutY="184.0" prefHeight="815.0" prefWidth="777.0" title="Annually Income Report">
+         <xAxis>
+            <CategoryAxis fx:id="years" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="income2" label="Income(Rs)" side="LEFT" tickLabelFill="#00172d" />
+         </yAxis>
+      </LineChart>
+      <Label layoutX="31.0" layoutY="45.0" prefHeight="71.0" prefWidth="284.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="roomPane" prefHeight="1058.0" prefWidth="1642.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomController">
+   <children>
+      <TableView fx:id="roomTable" layoutX="755.0" layoutY="174.0" prefHeight="765.0" prefWidth="871.0" stylesheets="@../assest/css/table.css">
+        <columns>
+          <TableColumn fx:id="roomNumber" minWidth="0.0" prefWidth="508.0" text="Room Number" />
+          <TableColumn fx:id="typeOfRoom" prefWidth="173.0" text="Type of Room" />
+            <TableColumn fx:id="status" prefWidth="138.0" text="Status" />
+            <TableColumn fx:id="price" prefWidth="138.0" text="Price" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Pane layoutX="102.0" layoutY="180.0" prefHeight="807.0" prefWidth="631.0" style="-fx-border-color: #95c4e8; -fx-background-color: #95c4e8;">
+         <children>
+            <Text fill="WHITE" layoutX="168.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Room" wrappingWidth="305.9560546875">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Text>
+            <Button layoutX="484.0" layoutY="747.0" mnemonicParsing="false" onAction="#submitOnAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #a4e895;" text="Submit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <GridPane layoutX="48.0" layoutY="169.0" prefHeight="543.0" prefWidth="533.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="173.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="roomtypetxt" prefHeight="31.0" prefWidth="342.0" promptText="Double Room" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Type" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="roomnumbertxt" prefHeight="31.0" prefWidth="342.0" promptText="RD001" style="-fx-background-color: white;" GridPane.columnIndex="1" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="pricetxt" prefHeight="31.0" prefWidth="342.0" promptText="(RS)" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="statustxt" prefHeight="31.0" prefWidth="342.0" promptText="AC" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Button layoutX="1517.0" layoutY="950.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #e89595;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="1392.0" layoutY="950.0" mnemonicParsing="false" onAction="#editOnAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #95c4e8;" text="Edit" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="41.0" layoutY="32.0" prefHeight="71.0" prefWidth="284.0" text="Room">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

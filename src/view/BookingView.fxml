@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1058.0" prefWidth="1642.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookingController">
+   <children>
+      <Pane layoutX="92.0" layoutY="128.0" prefHeight="865.0" prefWidth="631.0" style="-fx-border-color: #95c4e8; -fx-background-color: #95c4e8;">
+         <children>
+            <Text fill="WHITE" layoutX="168.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Booking" wrappingWidth="305.9560546875">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Text>
+            <Button layoutX="484.0" layoutY="786.0" mnemonicParsing="false" onAction="#submitOnAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #a4e895;" text="Submit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <GridPane layoutX="48.0" layoutY="169.0" prefHeight="543.0" prefWidth="533.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="173.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="mealPlanetxt" prefHeight="31.0" prefWidth="342.0" promptText="Local" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Type">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="roomtypetxt" prefHeight="31.0" prefWidth="342.0" promptText="Double Room" style="-fx-background-color: white;" GridPane.columnIndex="1" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="roomnumbertxt" prefHeight="31.0" prefWidth="342.0" promptText="RD001" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name Of Food" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Meal Plan" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="pricetxt" prefHeight="31.0" prefWidth="342.0" promptText="(RS)" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="datetxt" prefHeight="31.0" prefWidth="342.0" promptText="DD/MM/YY" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="foodtxt" prefHeight="31.0" prefWidth="342.0" promptText="Milkrice" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <TableView fx:id="tableBooking" layoutX="744.0" layoutY="136.0" prefHeight="786.0" prefWidth="881.0" stylesheets="@../assest/css/table.css">
+        <columns>
+          <TableColumn fx:id="roomType" prefWidth="111.0" text="Room Type" />
+          <TableColumn fx:id="roomNumber" prefWidth="188.0" text="Room Number" />
+            <TableColumn fx:id="date" prefWidth="134.0" text="Date" />
+            <TableColumn fx:id="mealPlan" prefWidth="110.0" text="Meal Plan" />
+            <TableColumn fx:id="nameOfFood" prefWidth="184.0" text="Name Of Food" />
+            <TableColumn fx:id="price" prefWidth="149.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button layoutX="1497.0" layoutY="928.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #e89595;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="21.0" layoutY="23.0" prefHeight="71.0" prefWidth="341.0" text="Booking">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

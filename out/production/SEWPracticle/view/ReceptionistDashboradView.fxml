@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="frontDesk" prefHeight="1058.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReceptionistController">
+   <children>
+      <Pane layoutX="-5.0" layoutY="-4.0" prefHeight="1070.0" prefWidth="286.0" style="-fx-background-color: #95c4e8;">
+         <children>
+            <ImageView fitHeight="118.0" fitWidth="242.0" layoutX="77.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/image/modern-water-waves-logo-design-blue-ocean-sign-vector-26746297-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="82.0" layoutY="104.0" text="Blue Ocean">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox layoutX="3.0" layoutY="218.0" prefHeight="300.0" prefWidth="284.0">
+               <children>
+                  <JFXButton fx:id="dashbadButton" alignment="CENTER" contentDisplay="TOP" onAction="#dashbadButtonOnAction" prefHeight="59.0" prefWidth="284.0" text="   Dashborad">
+                     <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <image>
+                              <Image url="@../assest/Icons/Icon%20material-dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="customerButton" alignment="CENTER" contentDisplay="TOP" onAction="#customerButtonOnAction" prefHeight="71.0" prefWidth="289.0" text="Customer">
+                     <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/Icons/Icon%20awesome-user-alt.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="bookingButton" alignment="CENTER" contentDisplay="TOP" onAction="#bookingButtonOnAction" prefHeight="71.0" prefWidth="289.0" text="MealPlans">
+                     <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/Icons/Icon%20awesome-calendar-check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="okButton" alignment="CENTER" contentDisplay="TOP" onAction="#okbuttonOnAction" prefHeight="71.0" prefWidth="289.0" text="Reports">
+                     <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/Icons/Subtraction%201.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Button fx:id="loginbutton" alignment="CENTER" layoutX="9.0" layoutY="977.0" mnemonicParsing="false" onAction="#loginbuttonOnAction" prefHeight="59.0" prefWidth="276.0" style="-fx-background-color: #95c4e8;" text="        Admin Logout" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="secondAnchonePane" layoutX="279.0" layoutY="-2.0" prefHeight="1058.0" prefWidth="1642.0">
+         <children>
+            <Pane layoutX="21.0" layoutY="142.0" prefHeight="423.0" prefWidth="731.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fitHeight="403.0" fitWidth="724.0" layoutX="7.0" layoutY="14.0" opacity="0.42" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/image/Web%201920%20–%201.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="27.0" layoutY="43.0" prefHeight="91.0" prefWidth="434.0" text="Welcome.....">
+                     <font>
+                        <Font name="Segoe Script Bold" size="61.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time" alignment="CENTER_RIGHT" layoutX="413.0" layoutY="357.0" prefHeight="53.0" prefWidth="302.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date" alignment="CENTER_RIGHT" layoutX="415.0" layoutY="298.0" prefHeight="53.0" prefWidth="302.0" text="h">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="21.0" layoutY="35.0" prefHeight="71.0" prefWidth="341.0" text="Dashboard ">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <BarChart fx:id="MonthlyAvaliableRoom" layoutX="22.0" layoutY="578.0" prefHeight="466.0" prefWidth="928.0" title="Monthly Avaliable Room">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <PieChart fx:id="TodayAvaliableRoom" layoutX="1002.0" layoutY="588.0" prefHeight="448.0" prefWidth="620.0" title="Today Avaliable Room" />
+            <Pane layoutX="760.0" layoutY="146.0" prefHeight="421.0" prefWidth="454.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="3.0" prefHeight="71.0" prefWidth="456.0" text="Total Rooms ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="18.0" layoutY="83.0" prefHeight="293.0" prefWidth="415.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/Icons/Icon%20ionic-ios-bed.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="197.0" text="Single Room">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="22.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@../assest/Icons/Icon%20ionic-ios-bed.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@../assest/Icons/Icon%20ionic-ios-bed.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@../assest/Icons/Icon%20ionic-ios-bed.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="218.0" text="Double Room" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="191.0" text="Triple Room" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="185.0" text="Quad Room" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="207.0" text="7" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="207.0" text="6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="207.0" text="7" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="207.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane layoutX="1226.0" layoutY="146.0" prefHeight="421.0" prefWidth="398.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="CENTER" layoutX="19.0" prefHeight="61.0" prefWidth="357.0" text="All Meal Package ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="59.0" layoutY="80.0" prefHeight="302.0" prefWidth="274.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/Icons/restaurant.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@../assest/Icons/restaurant.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@../assest/Icons/restaurant.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="356.0" text="Local">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="354.0" text="French" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="355.0" text="Chinese" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

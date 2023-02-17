@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="confirmPanel" prefHeight="1058.0" prefWidth="1642.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfirmController">
+   <children>
+      <TableView fx:id="confirmTable" layoutX="26.0" layoutY="121.0" prefHeight="895.0" prefWidth="1587.0" stylesheets="@../assest/css/table.css">
+        <columns>
+          <TableColumn fx:id="roomTypeTable" prefWidth="163.0" text="Room Type" />
+          <TableColumn fx:id="roomNoTable" prefWidth="153.00003051757812" text="Room No" />
+            <TableColumn fx:id="customerTable" prefWidth="376.0" text="Customer Name" />
+            <TableColumn fx:id="datesTable" prefWidth="194.0" text="Date" />
+            <TableColumn fx:id="nightTable" prefWidth="116.0" text="Night" />
+            <TableColumn fx:id="mealsTable" prefWidth="140.0" text="Meals" />
+            <TableColumn fx:id="priceTable" prefWidth="159.0" text="Price" />
+            <TableColumn fx:id="printButton" minWidth="0.0" prefWidth="121.0" text="Print" />
+            <TableColumn fx:id="deleteButton" minWidth="0.0" prefWidth="134.0" text="Delect" />
+        </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="45.0" prefHeight="71.0" prefWidth="284.0" text="Conform">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

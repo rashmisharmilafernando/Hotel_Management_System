@@ -1,0 +1,11 @@
+.default-color0.chart-bar { -fx-bar-fill: #637bdb
+}
+
+.default-color1.chart-bar { -fx-bar-fill: Crimson
+}
+
+.default-color2.chart-bar { -fx-bar-fill: #00F2A0
+}
+.chart-plot-background {
+    -fx-background-color: white;
+}

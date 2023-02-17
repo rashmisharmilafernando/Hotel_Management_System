@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainScreen" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="-2.0" layoutY="-1.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/image/wallpaperflare.com_wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="518.0" layoutY="169.0" opacity="0.84" prefHeight="764.0" prefWidth="858.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="337.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/image/modern-water-waves-logo-design-blue-ocean-sign-vector-26746297-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="347.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue Ocean">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtusername" labelFloat="true" layoutX="235.0" layoutY="316.0" prefHeight="31.0" prefWidth="400.0" promptText="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPasswrd" labelFloat="true" layoutX="233.0" layoutY="414.0" prefHeight="31.0" prefWidth="400.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton layoutX="446.0" layoutY="527.0" onAction="#btnLogin" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4287f5;" text="Login">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCancle" layoutX="231.0" layoutY="525.0" onAction="#btnCancle" prefHeight="50.0" prefWidth="186.0" style="-fx-border-color: #4287f5;" text="Cancle">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
